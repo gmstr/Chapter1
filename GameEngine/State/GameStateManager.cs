@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
-namespace GameEngine
+namespace GameEngine.State
 {
     public class GameStateManager : GameComponent
     {
