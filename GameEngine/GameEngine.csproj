@@ -92,8 +92,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GameState.cs" />
-    <Compile Include="GameStateManager.cs" />
+    <Compile Include="Input\InputHandler.cs" />
+    <Compile Include="State\GameState.cs" />
+    <Compile Include="State\GameStateManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
