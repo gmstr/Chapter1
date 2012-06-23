@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter1", "Chapter1\Chapter1.csproj", "{D37E9F59-3782-4E68-9E96-8B7560C288AF}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Chapter1Content", "Chapter1Content\Chapter1Content.contentproj", "{197A3683-2234-46A6-9788-23DF21E477E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter1Content", "Chapter1Content\Chapter1Content.contentproj", "{197A3683-2234-46A6-9788-23DF21E477E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEngine", "GameEngine\GameEngine.csproj", "{D69D0FE3-360B-494A-81F7-0AF616C3B62C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{D37E9F59-3782-4E68-9E96-8B7560C288AF}.Release|x86.Build.0 = Release|x86
 		{197A3683-2234-46A6-9788-23DF21E477E5}.Debug|x86.ActiveCfg = Debug|x86
 		{197A3683-2234-46A6-9788-23DF21E477E5}.Release|x86.ActiveCfg = Release|x86
+		{D69D0FE3-360B-494A-81F7-0AF616C3B62C}.Debug|x86.ActiveCfg = Debug|x86
+		{D69D0FE3-360B-494A-81F7-0AF616C3B62C}.Debug|x86.Build.0 = Debug|x86
+		{D69D0FE3-360B-494A-81F7-0AF616C3B62C}.Release|x86.ActiveCfg = Release|x86
+		{D69D0FE3-360B-494A-81F7-0AF616C3B62C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
