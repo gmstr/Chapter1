@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using GameEngine.Input;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -9,7 +10,7 @@ namespace GameEngine.Controls
 {
     public class ControlManager : List<Control>
     {
-        int selectedControl = 0;
+        int selectedControl;
         bool acceptInput = true;
 
         static SpriteFont spriteFont;
@@ -28,7 +29,6 @@ namespace GameEngine.Controls
         public event EventHandler FocusChanged;
 
         public ControlManager(SpriteFont spriteFont)
-            : base()
         {
             ControlManager.spriteFont = spriteFont;
         }
@@ -50,19 +50,15 @@ namespace GameEngine.Controls
             if (Count == 0)
                 return;
 
-            foreach (Control c in this)
+            foreach (Control c in this.Where(c => c.Enabled))
             {
-                if (c.Enabled)
-                    c.Update(gameTime);
+                c.Update(gameTime);
             }
 
-            foreach (Control c in this)
+            foreach (Control c in this.Where(c => c.HasFocus))
             {
-                if (c.HasFocus)
-                {
-                    c.HandleInput(playerIndex);
-                    break;
-                }
+                c.HandleInput(playerIndex);
+                break;
             }
 
             if (!AcceptInput)
@@ -81,10 +77,9 @@ namespace GameEngine.Controls
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            foreach (Control c in this)
+            foreach (Control c in this.Where(c => c.Visible))
             {
-                if (c.Visible)
-                    c.Draw(spriteBatch);
+                c.Draw(spriteBatch);
             }
         }
 
@@ -111,7 +106,6 @@ namespace GameEngine.Controls
 
                     break;
                 }
-
             } while (currentControl != selectedControl);
 
             this[selectedControl].HasFocus = true;
