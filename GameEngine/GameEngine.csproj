@@ -96,6 +96,9 @@
     <Compile Include="Controls\ControlManager.cs" />
     <Compile Include="Input\InputHandler.cs" />
     <Compile Include="Map\AreaMap.cs" />
+    <Compile Include="Map\MapObject.cs" />
+    <Compile Include="Map\MapOrientation.cs" />
+    <Compile Include="Map\MapTile.cs" />
     <Compile Include="State\GameState.cs" />
     <Compile Include="State\GameStateManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
