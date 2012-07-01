@@ -33,10 +33,10 @@ namespace Chapter1.GameScreens
 
         #region Constructor Region
 
-        public BaseGameState(Game game, GameStateManager manager)
+        public BaseGameState(Game1 game, GameStateManager manager)
             : base(game, manager)
         {
-            GameRef = (Game1)game;
+            GameRef = game;
 
             playerIndexInControl = PlayerIndex.One;
         }
