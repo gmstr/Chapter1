@@ -8,7 +8,7 @@ namespace GameEngine.State
     {
         public event EventHandler OnStateChange;
 
-        Stack<GameState> gameStates = new Stack<GameState>();
+        readonly Stack<GameState> gameStates = new Stack<GameState>();
 
         const int startDrawOrder = 5000;
         const int drawOrderInc = 100;
